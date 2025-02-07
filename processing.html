@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/ico" href="https://api.payu.in/public/assets/images/favicon.ico">
+    <title>Payment Page</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://api.payu.in/public/7166f16967f108fc4c151975a6ef14d7.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .loading-container {
+            text-align: center;
+        }
+
+        .loading-container img {
+            width: 100px;  /* Adjust the size of the loading GIF */
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <img src="https://api.payu.in/public/assets/images/loadingPayu.gif" alt="Loading...">
+    </div>
+    <script>
+        // Generate a random number between 1 and 4
+        var randomTimeout = Math.floor(Math.random() * 4) + 1;
+      
+        // Set timeout using the random number
+        setTimeout(function() {
+          // Redirect to another page (replace 'https://example.com' with your target URL)
+          window.location.href = 'http://localhost:3500/otp.html';
+        }, randomTimeout * 1000); // Convert to milliseconds
+      </script>      
+</body>
+</html>
